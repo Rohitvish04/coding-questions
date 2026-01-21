@@ -67,3 +67,23 @@ function removeSpaces(str){
 }
 
 console.log(removeSpaces("loop method works")); // "loopmethodworks"
+
+5. Find the first character in a string that does not repeat.
+function firstNonRepeatingChar(str){
+    let freq = {}
+    
+    for(let char of str){
+        freq[char] = (freq[char] || 0) +1
+    }
+    
+    for(let char of str){
+        if(freq[char] === 1){
+            return char
+        }
+    };
+    return null;
+}
+
+console.log(firstNonRepeatingChar("swiss")); // "w" 
+console.log(firstNonRepeatingChar("racecar")); // "e" 
+console.log(firstNonRepeatingChar("aabbcc")); // null
