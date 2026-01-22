@@ -117,3 +117,21 @@ while (left < right){
     right--
 }
 console.log(arr)
+
+4. // Linear Search 
+// Return index of target
+// Return -1 if not found
+ arr = [1,2,3,4,5]
+ target = 7
+ function linearSearch(arr, target){
+ for(let i=0;i<arr.length -1 ; i++){
+      for(let j=1; j <arr.length -1;j++){
+          if(arr[i] + arr[j] == target){
+              return [i,j]
+          }
+      }
+       
+ }
+     return -1
+ }
+ console.log(linearSearch(arr, target))
