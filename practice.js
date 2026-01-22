@@ -87,3 +87,33 @@ function firstNonRepeatingChar(str){
 console.log(firstNonRepeatingChar("swiss")); // "w" 
 console.log(firstNonRepeatingChar("racecar")); // "e" 
 console.log(firstNonRepeatingChar("aabbcc")); // null
+
+// Array Questions here //
+
+6.Sum of array
+arr = [1,2,3,4,5]
+sum=0
+for(let i of arr){
+     sum+=i
+}
+console.log(sum)
+
+3. // Reverse an array
+arr = [1,2,3,4,5]
+reversed= []
+for(let i=arr.length-1 ; i >=0;i--){
+     reversed.push(arr[i])
+}
+console.log(reversed)
+
+// 2 . opitions
+arr = [1,2,3,4,5]
+
+left=0
+right = arr.length -1
+while (left < right){
+    [arr[left], arr[right]] = [arr[right], arr[left]]
+    left++
+    right--
+}
+console.log(arr)
