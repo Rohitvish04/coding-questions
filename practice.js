@@ -135,3 +135,18 @@ console.log(arr)
      return -1
  }
  console.log(linearSearch(arr, target))
+
+4.// Linear Search for Counting Occurrences
+ arr = [1,2,3,4,2,2,5]
+ target = 2
+ function countOccurrences(arr, target){
+     let count=0
+ for(let i=0;i<arr.length -1 ; i++){
+      if(arr[i] == target){
+          count++
+      }
+        
+ }
+    return count
+ }
+ console.log(countOccurrences(arr, target))
