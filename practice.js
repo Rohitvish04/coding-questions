@@ -136,7 +136,7 @@ console.log(arr)
  }
  console.log(linearSearch(arr, target))
 
-4.// Linear Search for Counting Occurrences
+5.// Linear Search for Counting Occurrences
  arr = [1,2,3,4,2,2,5]
  target = 2
  function countOccurrences(arr, target){
@@ -150,3 +150,25 @@ console.log(arr)
     return count
  }
  console.log(countOccurrences(arr, target))
+6. // 6. Binary Search
+
+// Return index of target
+ function binarySearch(sortedArr, target){
+     let left=0
+     let right =sortedArr.length -1
+     while (  left <= right){
+         let mid = Math.floor((left+right) / 2)
+         if(sortedArr[mid] === target){
+             return mid;
+         }else if(sortedArr[mid] < target){
+             left = mid +1
+         }else{
+             right = mid -1
+         }
+           
+     }
+     return -1;
+ }
+const sortedArr = [1, 3, 5, 7, 9, 11]; 
+console.log(binarySearch(sortedArr, 7)); // Output: 3 
+console.log(binarySearch(sortedArr, 4)); // Output: -1
