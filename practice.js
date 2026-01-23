@@ -273,3 +273,19 @@ function countOccurrences(arr,target){
 let arr = [1, 2, 2, 2, 3, 4, 5]; 
 let target = 2;
 console.log(countOccurrences(arr, target)); // Output: 3
+
+10. //  Check if Array is Rotated
+arr = [1,2,3,4,5,6]
+ 
+function isRotated(arr){
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] < arr[i - 1]){
+            return true; // rotation detected
+        }
+    }
+    return false; // no rotation found
+}
+
+// Examples:
+console.log(isRotated([3,4,5,1,2])); // true
+console.log(isRotated([1,2,3,4,5])); // false
