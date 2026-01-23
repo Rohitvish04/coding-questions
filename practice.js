@@ -195,7 +195,7 @@ Even after finding element, search left side
      return result; 
  }
 const sortedArr = [1, 3, 5,3, 7,3, 9, 11]; 
-console.log(firstOccurrence(sortedArr, 3)); // Output: 3 
+console.log(firstOccurrence(sortedArr, 3)); // Output: 1
 console.log(firstOccurrence(sortedArr, 4)); // Output: -1
 
 8.Last Occurrence of Element
@@ -220,5 +220,5 @@ After finding element, search right side
      return result; 
  }
 const sortedArr = [1, 3, 5,3, 7,3, 9, 11]; 
-console.log(lastOccurrence(sortedArr, 3)); // Output: 3 
+console.log(lastOccurrence(sortedArr, 3)); // Output: 5
 console.log(lastOccurrence(sortedArr, 4)); // Output: -1
