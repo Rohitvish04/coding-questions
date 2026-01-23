@@ -222,3 +222,54 @@ After finding element, search right side
 const sortedArr = [1, 3, 5,3, 7,3, 9, 11]; 
 console.log(lastOccurrence(sortedArr, 3)); // Output: 5
 console.log(lastOccurrence(sortedArr, 4)); // Output: -1
+
+9.Count Occurrences of a Number in a Sorted Array
+
+function firstOccurrence(arr, target){
+    let left =0
+    let right =arr.length -1
+    let result =-1
+    
+    while ( left <= right){
+        let mid = Math.floor((left+ right)/2)
+        if(arr[mid] === target){
+            result = mid
+            right = mid -1 
+        }else if(arr[mid] < target){
+            left = mid +1
+        }else {
+            right = mid -1
+        }
+    }
+    return result
+}
+
+function lastOccurrence(arr,target){
+      let left =0
+    let right =arr.length -1
+    let result =-1
+    
+    while ( left <= right){
+        let mid = Math.floor((left+ right)/2)
+        if(arr[mid] === target){
+            result = mid
+            left = mid +1
+        }else if(arr[mid] < target){
+            left = mid +1
+        }else {
+            right = mid -1
+        }
+    }
+    return result
+}
+
+function countOccurrences(arr,target){
+    let first = firstOccurrence(arr, target)
+    if (first === -1) return 0; // not found
+    let last = lastOccurrence(arr, target)
+    return last - first  +1
+}
+// Example usage 
+let arr = [1, 2, 2, 2, 3, 4, 5]; 
+let target = 2;
+console.log(countOccurrences(arr, target)); // Output: 3
