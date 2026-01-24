@@ -289,3 +289,22 @@ function isRotated(arr){
 // Examples:
 console.log(isRotated([3,4,5,1,2])); // true
 console.log(isRotated([1,2,3,4,5])); // false
+
+11.// Move and Shift zero
+function moveZeroes(arr) {
+    let pos = 0
+    for(let i=0;i<arr.length;i++){
+         if(arr[i] !== 0){
+             arr[pos] = arr[i]
+             pos++
+         }
+    }
+    while (pos < arr.length){
+        arr[pos] = 0
+        pos++
+    }
+    return arr
+}
+
+let arr = [0, 1, 0, 3, 12]; 
+console.log(moveZeroes(arr));
