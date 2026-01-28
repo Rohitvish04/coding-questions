@@ -308,3 +308,26 @@ function moveZeroes(arr) {
 
 let arr = [0, 1, 0, 3, 12]; 
 console.log(moveZeroes(arr));
+
+12. Remove Duplicates from Sorted Array
+
+function removeDuplicates(nums) {
+    if (nums.length === 0) return 0;
+
+    let i = 0; // slow-runner (last unique element index)
+
+    for (let j = 1; j < nums.length; j++) { // fast-runner
+        if (nums[j] !== nums[i]) {
+            i++; // move the slow pointer
+            nums[i] = nums[j]; // overwrite with the next unique element
+        }
+    }
+
+    return i + 1; // length is last index + 1
+}
+
+// Example usage:
+let nums = [1, 1, 2, 2, 3];
+let newLength = removeDuplicates(nums);
+console.log(newLength); // 3
+console.log(nums.slice(0, newLength)); // [1, 2, 3]
