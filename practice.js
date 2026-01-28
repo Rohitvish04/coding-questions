@@ -331,3 +331,24 @@ let nums = [1, 1, 2, 2, 3];
 let newLength = removeDuplicates(nums);
 console.log(newLength); // 3
 console.log(nums.slice(0, newLength)); // [1, 2, 3]
+
+13.  Majority Element
+
+function majorityElement(nums) {
+  const n = nums.length;
+  for (let i = 0; i < n; i++) {
+    let count = 0;
+    for (let j = 0; j < n; j++) {
+      if (nums[j] === nums[i]) {
+        count++;
+      }
+    }
+    if (count > Math.floor(n / 2)) {
+      return nums[i];
+    }
+  }
+  return -1;
+}
+
+console.log(majorityElement([2, 2, 1, 2, 3, 2, 2]
+))
