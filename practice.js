@@ -351,4 +351,24 @@ function majorityElement(nums) {
 }
 
 console.log(majorityElement([2, 2, 1, 2, 3, 2, 2]
-))
+));
+
+14. Rotate array
+
+nums = [1,2,3,4,5]
+k = 7
+ 
+function rotate(nums,k){
+    const n = nums.length;
+    k = k%n
+    for(let i=0; i< k;i++){
+        const previous = nums[n -1]
+        
+        for(let j=n-1; j>0;j--){
+             nums[j] = nums[j -1]
+        }
+        nums[0] = previous
+    }
+    return nums
+}
+console.log(rotate(nums,k))
