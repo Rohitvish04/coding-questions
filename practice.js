@@ -372,3 +372,24 @@ function rotate(nums,k){
     return nums
 }
 console.log(rotate(nums,k))
+
+14. Product of Array Except Self
+function productExceptSelf(nums) {
+    const n = nums.length
+    const output = new Array(n);
+    
+    for(let i=0; i < n; i++){
+        output[i] =1;
+        for(let j=0; j < n; j++){
+            if (i !== j){
+                output[i] *= nums[j];
+            }
+        }
+    }
+    return output;
+}
+
+nums = [1, 2, 3, 4]
+console.log(productExceptSelf(nums))
+
+
