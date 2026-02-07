@@ -16,10 +16,11 @@ console.log(reversed("hello"))
 2.Check if a given string is a palindrome
 
 function isPalindrome(str){
+    let lower = str.toLowerCase()
     let left=0
-    let right= str.length -1
+    let right= lower.length -1
     while (left < right ){
-        if( str[left] !== str[right]){
+        if( lower[left] !== lower[right]){
             return false;
         }
         return true;
