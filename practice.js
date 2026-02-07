@@ -436,4 +436,24 @@ console.log(isSubsequence("abc", "ahbgdc")); // true
 console.log(isSubsequence("axc", "ahbgdc")); // false
 console.log(isSubsequence("", "hello"));     // true
 
+16. Check if a number is a palindrome
+
+function isPalindromeNumber(x) {
+  if (x < 0) return false; // negative numbers are not palindromes
+
+  let original = x;
+  let reversed = 0;
+
+  while (x > 0) {
+    reversed = reversed * 10 + (x % 10);
+    x = Math.floor(x / 10);
+  }
+
+  return original === reversed;
+}
+
+isPalindromeNumber(121);   // true
+isPalindromeNumber(-121);  // false
+isPalindromeNumber(10);    // false
+
 
