@@ -23,3 +23,17 @@ const adultNames = users
     .map(user=> user.name);
     
 console.log(adultNames)
+
+3. Given an array of users { name, active }, return only the names of active users.
+const users = [
+  { id: 1, name: "Alice", age: 28, active: true, score: 50 },
+  { id: 2, name: "Bob", age: 17, active: false, score: 40 },
+  { id: 3, name: "Charlie", age: 32, active: true, score: 70 },
+  { id: 4, name: "Diana", age: 24, active: true, score: 30 }
+];
+ 
+const activeUserNames = users
+    .filter(user => user.active === true)
+    .map(user => user.name)
+    
+console.log(activeUserNames)
