@@ -496,3 +496,23 @@ for(let i=0; i < arr.length-1; i++){
 }
 return [min,max]
 }
+
+20. second Largest
+
+function secondLargest(arr){
+  if (arr.length === 0) return -1;
+  let largest = -Infinity
+  let second = - Infinity
+
+  for(let num of arr){
+    if (num > largest) {
+      second = largest
+      second = num
+    }else if(num > second && num < largest){
+      second = num
+}
+return second
+  }
+
+let arr = [12,35,1,10,34,1]
+console.log(secondLargest(arr))
