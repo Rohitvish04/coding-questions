@@ -483,3 +483,16 @@ function alternateElement(arr) {
 let arr= [1,2,3,4,5]
 let output = alternateelement(arr)
 console.log(output)  // 1,3,5
+
+19. MinMax in aaray
+
+function findMinMax(arr)
+  let min = arr[0]
+let max = arr[0]
+
+for(let i=0; i < arr.length-1; i++){
+  if( arr[i] < min) return min =arr[i]
+  if(arr[i] > max ) return max = arr[i]
+}
+return [min,max]
+}
