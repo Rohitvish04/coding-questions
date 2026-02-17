@@ -471,7 +471,7 @@ function maxSubArray(nums) {
   return maxSum;
 }
 
-18. 
+18. Alternates in an Array
 function alternateElement(arr) {
   let result =[]
   for(let i=0; i< arr.length; i+=2){
