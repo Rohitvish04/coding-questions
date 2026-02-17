@@ -470,3 +470,16 @@ function maxSubArray(nums) {
   }
   return maxSum;
 }
+
+18. 
+function alternateElement(arr) {
+  let result =[]
+  for(let i=0; i< arr.length; i+=2){
+    result.push(arr[i])
+  }
+  return result;
+}
+
+let arr= [1,2,3,4,5]
+let output = alternateelement(arr)
+console.log(output)  // 1,3,5
