@@ -497,7 +497,23 @@ for(let i=0; i < arr.length-1; i++){
 return [min,max]
 }
 
-20. second Largest
+20.  Largest number in the array
+
+let arr= [1,2,3,45,5]
+function largestNumber(arr){
+    if(arr.length === 0) return -1;
+    let largest = -Infinity
+    
+    for(let num of arr){
+        if(num > largest){
+            largest = num
+        }
+    }
+    return largest
+}
+console.log(largestNumber(arr))
+
+21. second Largest
 
 function secondLargest(arr){
   if (arr.length === 0) return -1;
