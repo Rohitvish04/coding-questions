@@ -333,6 +333,19 @@ let newLength = removeDuplicates(nums);
 console.log(newLength); // 3
 console.log(nums.slice(0, newLength)); // [1, 2, 3]
 
+// 2 ... method for loop
+let nums = [1,2,3,4,4,2]
+
+let output = []
+
+for(let i=0;i < nums.length;i++){
+    if(!output.includes(nums[i])){
+        output.push(nums[i])
+    }
+}
+
+console.log(output) // [1,2,3,4 ]
+
 13.  Majority Element
 
 function majorityElement(nums) {
