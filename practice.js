@@ -311,7 +311,7 @@ let arr = [0, 1, 0, 3, 12];
 console.log(moveZeroes(arr));
 
 12. Remove Duplicates from Sorted Array
-
+// two pointer method
 function removeDuplicates(nums) {
     if (nums.length === 0) return 0;
 
