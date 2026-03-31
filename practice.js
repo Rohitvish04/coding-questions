@@ -512,6 +512,19 @@ return [min,max]
 
 20.  Largest number in the array
 
+let nums  = [10,20,30,40]
+
+let max  = num[0]
+
+for(let num of numbers){
+    if (num > max){
+        max =num;
+    }
+}
+
+console.log(max)
+
+
 let arr= [1,2,3,45,5]
 function largestNumber(arr){
     if(arr.length === 0) return -1;
